@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../Style/style.css" />
 </head>
 <body>
+    <form id="form1" runat="server">
     <div id="main">
         <div id="header">
             <div id="logo">
@@ -26,13 +27,15 @@
             <asp:Label runat="server" Text="Bienvenido"></asp:Label>
             <div id="content">
                 </div>
-                <div id="content_footer"></div>
+                <div id="content_footer">ENHORABUENA!! TE HAS LOGUEADO!!!</div>
                 <div id="footer">
                     <h3>FOOTER</h3>
                     Avenida Rivadavia 6895 | Buenos Aires | Argentina
                 </div>
             </div>
         </div>
+    
+    </form>
     
 </body>
 </html>
