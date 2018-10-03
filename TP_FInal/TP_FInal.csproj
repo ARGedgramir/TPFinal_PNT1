@@ -87,11 +87,12 @@
     <Content Include="Pages\Contacto.aspx" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\Registro.aspx" />
-    <Content Include="Services\Consultar_Profesores.php" />
     <Content Include="Services\Consultar_Usuarios.php" />
     <Content Include="Style\style.css" />
     <Content Include="Style\stylehome.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\default.aspx.cs">
