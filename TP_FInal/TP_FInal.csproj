@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Creacion_de_SP.sql" />
+    <Content Include="Creacion_de_tablas.sql" />
     <Content Include="Pages\default.aspx" />
     <Content Include="FrontEnd\Login.aspx" />
     <Content Include="Images\banner.jpg" />
@@ -87,6 +89,7 @@
     <Content Include="Pages\Contacto.aspx" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\Registro.aspx" />
+    <Content Include="Pendientes.txt" />
     <Content Include="Services\Consultar_Usuarios.php" />
     <Content Include="Style\style.css" />
     <Content Include="Style\stylehome.css" />
