@@ -12,5 +12,7 @@ Modificar BD, tabla profesores para que el campo table_id sea autoincremental
 }
 
 
+se agrego el archivo gitignore
+
 
 
