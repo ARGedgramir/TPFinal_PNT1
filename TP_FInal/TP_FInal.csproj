@@ -67,6 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Creacion_de_SP.sql" />
+    <Content Include="Creacion_de_tablas.sql" />
+    <Content Include="Pages\default.aspx" />
     <Content Include="FrontEnd\Login.aspx" />
     <Content Include="Images\banner.jpg" />
     <Content Include="Images\menu-02.jpg" />
@@ -79,23 +82,29 @@
     <Content Include="Images\menu-08.jpg" />
     <Content Include="Images\search.png" />
     <Content Include="Metods\AdminProfesores.js" />
-    <Content Include="Metods\Login_Connector.js" />
-    <Content Include="Metods\Login.js" />
-    <Content Include="Pages\HtmlPage1.html" />
-    <Content Include="Pages\login.php" />
     <Content Include="Pages\AdminEventos.aspx" />
     <Content Include="Pages\AdminProfesores.aspx" />
     <Content Include="Pages\AdminCursos.aspx" />
     <Content Include="Pages\AdminAlumnos.aspx" />
     <Content Include="Pages\Contacto.aspx" />
     <Content Include="Pages\Login.aspx" />
-    <Content Include="Services\Consultar_Profesores.php" />
+    <Content Include="Pages\Registro.aspx" />
+    <Content Include="Pendientes.txt" />
     <Content Include="Services\Consultar_Usuarios.php" />
     <Content Include="Style\style.css" />
     <Content Include="Style\stylehome.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -140,9 +149,17 @@
     </Compile>
     <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

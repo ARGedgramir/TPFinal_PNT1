@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="TP_FInal.Pages.WebForm1" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="TP_FInal.Pages.Login" %>
 
 <!DOCTYPE html>
 
@@ -26,26 +26,29 @@
 
             <div id="content">
                 <h1>INICIO DE SESION</h1>
-               <form>
-                    <!-- USERNAME INPUT -->
-                    <label for="username">Usuario:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; </label>
-                    <input  type="text" placeholder="Ingrese su Usuario"id="Usuario"/>&nbsp;
-                    <!-- PASSWORD INPUT -->
-                    <label for="password">
-                    <br />
-                    Contraseña:&nbsp;&nbsp;&nbsp; </label>
-                    &nbsp;<input type="password" placeholder="Ingrese Contraseña" id="Contrasenna"/><br />
-                    &nbsp;<input type="submit" value="Iniciar sesion" id="Login"/>
-                    <br />
-                    <a href="ResetPassword">Cambiar Contraseña?</a><br/>
+                <form id="form1" runat="server">
+                   <table>
+                    <tr>
+                        <td> Usuario:</td>
+                        <td class="auto-style1"><asp:TextBox ID="txtuserid" runat="server" required="true" Width="260px"></asp:TextBox></td>
+                    </tr> 
+                    <tr>
+                        <td> Password:</td>
+                        <td class="auto-style1"><asp:TextBox ID="txtpassword" runat="server" required="true" Width="260px"></asp:TextBox></td>
+                    </tr>
+                       <tr>
+                        <td></td>
+                        <td><asp:Button ID="btnlogin" runat="server" Text="Iniciar sesion" Width="150px" onclick="Btnlogin_Click"/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><asp:Button ID="btnlostpass" runat="server" Text="Recuperar contaseña" Width="150px" onclick="btnlosspass_Click"/></td>
+                    </tr>
+                </table>
                 </form>
-                 <script src="../metods/Login_Connector.js"></script>
-                 <script src="../metods/Login.js"></script>
-
-                <div />
-             
-                <div id="content_footer"></div>
-                <div id="footer">
+             <div />
+             <div id="content_footer"></div>
+             <div id="footer">
                     <h3>FOOTER</h3>
                     Avenida Rivadavia 6895 | Buenos Aires | Argentina
                 </div>

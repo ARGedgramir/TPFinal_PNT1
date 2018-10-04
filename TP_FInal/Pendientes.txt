@@ -1,0 +1,18 @@
+Registro{
+- Falta mensaje si pudo guardar el registro o tuvo un error.
+- Falta agregar al proyecto Original esta seccion)
+}
+
+Login{
+- Falta mensaje de clave incorrecta.
+}
+
+AdminProfesores{
+Modificar BD, tabla profesores para que el campo table_id sea autoincremental
+}
+
+
+se agrego el archivo gitignore
+
+
+

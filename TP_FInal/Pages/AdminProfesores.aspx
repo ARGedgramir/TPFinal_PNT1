@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminProfesores.aspx.cs" Inherits="TP_FInal.Pages.WebForm1" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminProfesores.aspx.cs" Inherits="TP_FInal.Pages.AdminProfesores" %>
 
 <!DOCTYPE html>
 
@@ -28,25 +28,47 @@
                 <h1>Administracion Profesores</h1>
                 <div />
                 <div>
-               <form>
-                    <label>Legajo:<input  type="text" placeholder="Ingrese su Usuario"id="Usuario"/>&nbsp;<img src="../Images/search.png" style="height: 21px; width: 26px" id="searchLegajo"/>
-                    <br />
-                    Nombre<input  type="text" placeholder="Nombre del Profesor"id="nombreProf"/> 
-                    <br />
-                    Apellido:<input  type="text" placeholder="Apellido del Profesor"id="apellidoProf"/> 
-                    <br />
-                    Fecha de Nacimiento:<input  type="text" placeholder="Fecha de Nacimiento"id="fechNacProf"/> 
-                    <br />
-                    DNI:<input  type="text" placeholder="Numero de DNI del profesor"id="dniProf"/> 
-                    <br />
-                    E-mail:<input  type="text" placeholder="E-mail del profesor"id="emailProf"/> 
-                    <br />
-                    Telefono:<input  type="text" placeholder="Numero de telefono del Profesor"id="telProf"/> 
-                    <br />
-                    Antiguedad:<input  type="text" placeholder="Antiguedad del profesor"id="antProf"/> </label>
-                   
-                   <input type="button" value="ingresar" id="Login"/>
-                   <br />
+               <form id="formAdmProf" runat="server">
+               <table>
+                    <tr>
+                        <td> Legajo:</td>
+                         <td class="auto-style1"><asp:TextBox ID="txtinternalID" runat="server" required="true" Width="260px"></asp:TextBox>
+                             <asp:ImageButton ID="searchintid" runat="server" onclick="BtnSearch_Click" ImageUrl="../Images/search.png" style="height: 21px; width: 26px"></asp:ImageButton></td>
+                    </tr>
+                   <tr>
+                        <td> Nombre:</td>
+                        <td class="auto-style1"><asp:TextBox ID="txtFirstName" runat="server" required="true" Width="260px"></asp:TextBox></td>
+                    </tr>
+                   <tr>
+                        <td> Apellido:</td>
+                        <td class="auto-style1"><asp:TextBox ID="txtLastName" runat="server" required="true" Width="260px"></asp:TextBox></td>
+                    </tr>
+                   <tr>
+                        <td> Fecha de Nacimiento:</td>
+                    </tr>
+                      <tr>
+                        <td> DNI:</td>
+                        <td class="auto-style1"><asp:TextBox ID="txtdni" runat="server" required="true" Width="260px" ></asp:TextBox></td>
+                    </tr>
+                 
+                   <tr>
+                        <td> E-mail:</td>
+                        <td class="auto-style1"><asp:TextBox ID="txtemail" runat="server" required="true" Width="260px"></asp:TextBox></td>
+                    </tr>
+                   <tr>
+                        <td> Telefono:</td>
+                        <td class="auto-style1"><asp:TextBox ID="txttelephone" runat="server" required="true" Width="260px"></asp:TextBox></td>
+                    </tr>
+                   <tr>
+                        <td> Antiguedad:</td>
+                        <td class="auto-style1"><asp:TextBox ID="txtantique" runat="server" required="true" Width="260px"></asp:TextBox></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> <asp:Button ID="btnInsMod" runat="server" Text="Crear/Modificar Profesor" Width="150px" onclick="BtnInsMod_Click"/>
+                        </td>
+                    </tr>
+               </table>
                </form>
               </div>
             <div id="content_footer"></div>
