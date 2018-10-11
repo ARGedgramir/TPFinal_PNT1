@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="TP_FInal.Pages.WebForm1" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminAlumnos.aspx.cs" Inherits="TP_FInal.Pages.AdminAlumnos" %>
 
 <!DOCTYPE html>
 
@@ -9,6 +9,30 @@
     <meta name="keywords" content="website keywords, website keywords" />
     <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
     <link rel="stylesheet" type="text/css" href="../Style/style.css" />
+    <style type="text/css">
+
+        .auto-style2 {
+            text-align: center;
+            width: 479px;
+        }
+        .auto-style3 {
+            width: 699px;
+        }
+        .auto-style4 {
+            width: 84px;
+        }
+        .auto-style5 {
+            width: 84px;
+            text-align: left;
+        }
+        .auto-style6 {
+            text-align: justify;
+            width: 479px;
+        }
+        .auto-style7 {
+            width: 479px;
+        }
+    </style>
 </head>
 <body>
     <div id="main">
@@ -24,29 +48,50 @@
         &nbsp;</div>
         <div id="site_content">
 
-            <div id="content">
+            <div id="content" class="auto-style3">
                 <h1>Administracion Alumnos</h1>
                 <div />
                 <div>              
-                    <form>
-                        <label>Legajo:<input  type="text" placeholder="Ingrese su Usuario"id="Usuario"/>&nbsp;<img src="../Images/search.png" style="height: 21px; width: 26px" id="searchLegajo"/>
-                        <br />
-                        Nombre<input  type="text" placeholder="Nombre del Profesor"id="nombreProf"/> 
-                        <br />
-                        Apellido:<input  type="text" placeholder="Apellido del Profesor"id="apellidoProf"/> 
-                        <br />
-                        Fecha de Nacimiento:<input  type="text" placeholder="Fecha de Nacimiento"id="fechNacProf"/> 
-                        <br />
-                        DNI:<input  type="text" placeholder="Numero de DNI del profesor"id="dniProf"/> 
-                        <br />
-                        E-mail:<input  type="text" placeholder="E-mail del profesor"id="emailProf"/> 
-                        <br />
-                        Telefono:<input  type="text" placeholder="Numero de telefono del Profesor"id="telProf"/> 
-                        <br />
-                        Antiguedad:<input  type="text" placeholder="Antiguedad del profesor"id="antProf"/> </label>
-                   
-                        <input type="button" value="ingresar" id="Login"/>
-                        <br />
+                <form id="formAdmAlumn" runat="server">
+                <table>
+                    <tr>
+                        <td class="auto-style4"> Legajo:</td>
+                         <td class="auto-style7"><asp:TextBox ID="txtinternalID" runat="server" Width="260px"></asp:TextBox><asp:ImageButton ID="searchintid" runat="server" onclick="BtnSearch_Click" ImageUrl="../Images/search.png" style="height: 21px; width: 26px" formnovalidate="formnovalidate"></asp:ImageButton>                             <asp:Label ID="lblerror" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td class="auto-style4"> Nombre:</td>
+                        <td class="auto-style7"><asp:TextBox ID="txtFirstName" runat="server" required="false" Width="260px" ValidateRequestMode="Disabled"></asp:TextBox></td>
+                    </tr>
+                   <tr>
+                        <td class="auto-style4"> Apellido:</td>
+                        <td class="auto-style7"><asp:TextBox ID="txtLastName" runat="server" required="false" Width="260px"></asp:TextBox></td>
+                    </tr>
+                   <tr>
+                        <td class="auto-style5"> Fecha de Nacimiento:</td>
+                    </tr>
+                      <tr>
+                        <td class="auto-style4"> DNI:</td>
+                        <td class="auto-style7"><asp:TextBox ID="txtdni" runat="server" required="false" Width="260px" ></asp:TextBox></td>
+                      </tr>
+                   <tr>
+                        <td class="auto-style4"> E-mail:</td>
+                        <td class="auto-style7"><asp:TextBox ID="txtemail" runat="server" required="false" Width="260px"></asp:TextBox></td>
+                   </tr>
+                   <tr>
+                        <td class="auto-style4"> Telefono:</td>
+                        <td class="auto-style7"><asp:TextBox ID="txttelephone" runat="server" required="false" Width="260px"></asp:TextBox></td>
+                   </tr>
+                    <tr>
+                        <td class="auto-style4"></td>
+                        <td class="auto-style2"><asp:Label ID="lblMensaje" runat="server" CssClass="texto_alerta"></asp:Label></td>
+                    </tr>
+                   <tr>
+                        <td class="auto-style4"></td>
+                        <td class="auto-style6"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Button ID="btnInsMod" runat="server" Text="Crear/Modificar Alumno" Width="150px" onclick="BtnInsMod_Click"/>
+                        </td>
+                    </tr>
+               </table>
                </form>
                 </div>
                 <div id="content_footer"></div>

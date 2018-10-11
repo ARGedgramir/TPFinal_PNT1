@@ -26,3 +26,20 @@ create Proc spchecklogin
 as
 SELECT COUNT(*) FROM usuarios WHERE email = @email AND password = @password
 */
+
+/*ALTER proc [dbo].[spInsertAlumn]
+@firstName Nvarchar(50),
+@lastName Nvarchar(50),
+@DNI int,
+@Email Nvarchar(50),
+@telephone Nvarchar(50),
+@internal_id int
+as
+Insert into alumnos(First_Name, Last_Name,birthdate,DNI,email,telephone,internal_id) values(@firstName,@lastName,NULL,@DNI,@email,@telephone, @internal_id)
+*/
+/*
+create proc spSearchAlumn
+@internal_id int
+as
+select * from alumnos where internal_id=@internal_id
+*/

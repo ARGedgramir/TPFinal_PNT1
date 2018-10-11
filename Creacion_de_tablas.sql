@@ -46,4 +46,9 @@ CREATE TABLE cursos
 date datetime NOT NULL,
 time time not null,
 maxallumn integer not null)
+
+use instituto
+
+ ALTER TABLE alumnos ADD UNIQUE	(DNI);
+ ALTER TABLE alumnos ADD UNIQUE	(internal_id);
 */

@@ -28,7 +28,8 @@ namespace TP_FInal.Pages
             }
             else
             {
-                Response.Redirect("Login.aspx"); //Refresco la pagina
+                lblMensaje.Text = "Usuario incorrecto.";
+                //Response.Redirect("Login.aspx"); //Refresco la pagina
             };
         }
 
@@ -39,8 +40,6 @@ namespace TP_FInal.Pages
             SqlConnection con = new SqlConnection(WebConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString);
 
             //cadena conexion
-
-
             con.Open();
 
             SqlCommand com = new SqlCommand(); // Create a object of SqlCommand class

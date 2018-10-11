@@ -9,6 +9,11 @@
     <meta name="keywords" content="website keywords, website keywords" />
     <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
     <link rel="stylesheet" type="text/css" href="../Style/style.css" />
+    <style type="text/css">
+        .auto-style2 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div id="main">
@@ -30,19 +35,23 @@
                    <table>
                     <tr>
                         <td> Usuario:</td>
-                        <td class="auto-style1"><asp:TextBox ID="txtuserid" runat="server" required="true" Width="260px"></asp:TextBox></td>
+                        <td class="auto-style2"><asp:TextBox ID="txtuserid" runat="server" required="true" Width="260px"></asp:TextBox></td>
                     </tr> 
                     <tr>
                         <td> Password:</td>
-                        <td class="auto-style1"><asp:TextBox ID="txtpassword" runat="server" required="true" Width="260px"></asp:TextBox></td>
+                        <td class="auto-style2"><asp:TextBox ID="txtpassword" runat="server" required="true" Width="260px"></asp:TextBox></td>
                     </tr>
                        <tr>
                         <td></td>
-                        <td><asp:Button ID="btnlogin" runat="server" Text="Iniciar sesion" Width="150px" onclick="Btnlogin_Click"/></td>
+                        <td class="auto-style2"><asp:Label ID="lblMensaje" runat="server" CssClass="texto_alerta"></asp:Label></td>
+                    </tr>
+                       <tr>
+                        <td></td>
+                        <td class="auto-style2"><asp:Button ID="btnlogin" runat="server" Text="Iniciar sesion" Width="150px" onclick="Btnlogin_Click"/></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><asp:Button ID="btnlostpass" runat="server" Text="Recuperar contaseña" Width="150px" onclick="btnlosspass_Click"/></td>
+                        <td class="auto-style2"><asp:Button ID="btnlostpass" runat="server" Text="Recuperar contaseña" Width="150px" onclick="btnlosspass_Click"/></td>
                     </tr>
                 </table>
                 </form>
